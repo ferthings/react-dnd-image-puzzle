@@ -1,7 +1,11 @@
 {
-  "name": "puzzle-demo",
+  "name": "react-dnd-image-puzzle",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferthings/react-dnd-image-puzzle"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -14,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && mv build demo",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/static/js/main.1b85cf57.chunk.js",
+    "main.js.map": "/static/js/main.1b85cf57.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.33ff29df.js",
+    "runtime-main.js.map": "/static/js/runtime-main.33ff29df.js.map",
+    "static/js/2.6fa09810.chunk.js": "/static/js/2.6fa09810.chunk.js",
+    "static/js/2.6fa09810.chunk.js.map": "/static/js/2.6fa09810.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.6fa09810.chunk.js.LICENSE.txt": "/static/js/2.6fa09810.chunk.js.LICENSE.txt",
+    "static/media/main-square-urban-tourism-spain.1ab7d0f9.jpg": "/static/media/main-square-urban-tourism-spain.1ab7d0f9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33ff29df.js",
+    "static/js/2.6fa09810.chunk.js",
+    "static/js/main.1b85cf57.chunk.js"
+  ]
+}
