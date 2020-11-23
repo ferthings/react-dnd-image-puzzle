@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/react-dnd-image-puzzle/static/js/main.1b85cf57.chunk.js",
+    "main.js.map": "/react-dnd-image-puzzle/static/js/main.1b85cf57.chunk.js.map",
+    "runtime-main.js": "/react-dnd-image-puzzle/static/js/runtime-main.989096c7.js",
+    "runtime-main.js.map": "/react-dnd-image-puzzle/static/js/runtime-main.989096c7.js.map",
+    "static/js/2.6fa09810.chunk.js": "/react-dnd-image-puzzle/static/js/2.6fa09810.chunk.js",
+    "static/js/2.6fa09810.chunk.js.map": "/react-dnd-image-puzzle/static/js/2.6fa09810.chunk.js.map",
+    "index.html": "/react-dnd-image-puzzle/index.html",
+    "static/js/2.6fa09810.chunk.js.LICENSE.txt": "/react-dnd-image-puzzle/static/js/2.6fa09810.chunk.js.LICENSE.txt",
+    "static/media/main-square-urban-tourism-spain.1ab7d0f9.jpg": "/react-dnd-image-puzzle/static/media/main-square-urban-tourism-spain.1ab7d0f9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.989096c7.js",
+    "static/js/2.6fa09810.chunk.js",
+    "static/js/main.1b85cf57.chunk.js"
+  ]
+}
