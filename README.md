@@ -2,9 +2,14 @@
 
 Create a puzzle from an image
 
+## Install package
+
+
 ```sh
 npm install react-dnd-image-puzzle
 ```
+
+## Your app
 
 ```js
 import Puzzle from 'react-dnd-image-puzzle';
@@ -26,8 +31,9 @@ function App() {
 }
 
 export default App;
-
 ```
+
+## Props
 
 Property    | Type     | Required | Default | Description
 :---        | :---     | :---     | :---    | :---
