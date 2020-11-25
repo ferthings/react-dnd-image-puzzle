@@ -2,6 +2,7 @@
   "name": "react-dnd-image-puzzle",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "ferthings <ferthings84@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/ferthings/react-dnd-image-puzzle"
