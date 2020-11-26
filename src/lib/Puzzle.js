@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { DndProvider } from 'react-dnd';
@@ -8,12 +8,15 @@ import Piece from './Piece';
 
 const Puzzle = (props) => {
   const { width, height, pieces, onComplete } = props;
-  const [originalPositions, setOriginalPositions] = useState([]);
-  const [positions, setPositions] = useState([]);
-  const [coords, setCoords] = useState([]);
-  const items = pieces * pieces;
+  const rootPositions = [...Array(pieces * pieces).keys()];
+  const [positions, setPositions] = useState(shuffle(rootPositions));
 
-  const onSwap = (sourcePosition, dropPosition) => {
+  const coords = rootPositions.map((pos) => ({
+    x: Math.floor((pos % pieces) * (width / pieces)),
+    y: Math.floor(pos / pieces) * (height / pieces),
+  }));
+
+  const onDropPiece = (sourcePosition, dropPosition) => {
     const oldPositions = positions.slice();
     const newPositions = [];
 
@@ -32,32 +35,15 @@ const Puzzle = (props) => {
 
     setPositions(newPositions);
 
-    if (isEqual(originalPositions, newPositions)) {
+    if (isEqual(rootPositions, newPositions)) {
       onComplete();
     }
   };
 
-  const getCoords = useCallback(
-    (position) => ({
-      x: Math.floor((position % pieces) * (width / pieces)),
-      y: Math.floor(position / pieces) * (height / pieces),
-    }),
-    [width, height, pieces]
-  );
-
   const renderPieces = () =>
     positions.map((i) => (
-      <Piece key={i} position={i} onSwap={onSwap} {...coords[i]} {...props} />
+      <Piece key={i} position={i} onDropPiece={onDropPiece} {...coords[i]} {...props} />
     ));
-
-  useEffect(() => {
-    const rootPositions = [...Array(items).keys()];
-    const coords = rootPositions.map((pos) => getCoords(pos));
-
-    setCoords(coords);
-    setOriginalPositions(rootPositions);
-    setPositions(shuffle(rootPositions));
-  }, [getCoords, items]);
 
   return (
     <DndProvider backend={HTML5Backend}>
