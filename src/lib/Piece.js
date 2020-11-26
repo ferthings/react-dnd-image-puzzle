@@ -4,7 +4,7 @@ import { useDrag, useDrop } from 'react-dnd';
 import { puzzlePieceStyles } from './styles';
 
 const Piece = memo((props) => {
-  const { position, onSwap } = props;
+  const { position, onDropPiece } = props;
 
   const [, dragEl] = useDrag({
     item: { position, type: 'PIECE' },
@@ -13,7 +13,7 @@ const Piece = memo((props) => {
   const [{ isOver }, dropRef] = useDrop({
     accept: 'PIECE',
     drop: (props) => {
-      onSwap(
+      onDropPiece(
         props.position, // source position
         position // drop position
       );
@@ -41,7 +41,7 @@ Piece.propTypes = {
   height: PropTypes.number.isRequired,
   pieces: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
-  onSwap: PropTypes.func.isRequired
+  onDropPiece: PropTypes.func.isRequired
 };
 
 export default Piece;
